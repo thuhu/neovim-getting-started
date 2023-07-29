@@ -7,10 +7,15 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 return require("packer").startup(function(use)
+
+		-- Packer
+		use("wbthomason/packer.nvim")
+
     -- Telescope
     use({
         "nvim-telescope/telescope.nvim",
          tag = "0.1.1",
          requires = { { "nvim-lua/plenary.nvim" } },
     })
+
 end)
