@@ -11,6 +11,9 @@ return require("packer").startup(function(use)
 		-- Packer
 		use("wbthomason/packer.nvim")
 
+		-- Common Utilities
+		use("nvim-lua/plenary.nvim")
+
     -- Telescope
     use({
         "nvim-telescope/telescope.nvim",
@@ -18,4 +21,13 @@ return require("packer").startup(function(use)
          requires = { { "nvim-lua/plenary.nvim" } },
     })
 
+		use({ 'rose-pine/neovim', as = 'rose-pine' })
+
+		use({ 
+				'nvim-treesitter/nvim-treesitter', 
+				config = function() 
+					require('configs.treesitter')
+				end,
+				{ run = ':TSUpdate'}
+		}) 
 end)

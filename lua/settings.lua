@@ -1,5 +1,6 @@
 local global = vim.g
 local o = vim.o
+local api = vim.api
 
 -- Editor options
 o.number = true -- Show line numbers
@@ -12,3 +13,13 @@ o.relativenumber = true -- Show the line number relative to the line with the cu
 o.ruler = true -- Show the line and column number of the cursor position, separated by a comma
 o.title = true -- When on, the title of the window will be set to the value of the title string
 o.showmatch = true -- When a bracket is inserted, briefly jump to the maching bracketr
+
+-- Colour stuff
+function ColorMyPencils(color)
+	color = color or "rose-pine"
+	vim.cmd.colorscheme(color)
+
+	api.nvim_set_hl(0, "Normal", { bg = "none" })	
+end
+
+ColorMyPencils()
