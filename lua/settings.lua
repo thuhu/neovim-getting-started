@@ -14,12 +14,3 @@ o.ruler = true -- Show the line and column number of the cursor position, separa
 o.title = true -- When on, the title of the window will be set to the value of the title string
 o.showmatch = true -- When a bracket is inserted, briefly jump to the maching bracketr
 
--- Colour stuff
-function ColorMyPencils(color)
-	color = color or "rose-pine"
-	vim.cmd.colorscheme(color)
-
-	api.nvim_set_hl(0, "Normal", { bg = "none" })	
-end
-
-ColorMyPencils()
