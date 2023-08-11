@@ -1,5 +1,4 @@
 -- Automatically run: PackerCompile
-	
 vim.api.nvim_create_autocmd("BufWritePost", {
 				group = vim.api.nvim_create_augroup("PACKET", { clear = true }),
 				pattern = "plugin.lua",
@@ -23,13 +22,13 @@ return require("packer").startup(function(use)
 
 		use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-		use({ 
-			'nvim-treesitter/nvim-treesitter', 
-			config = function() 
+		use({
+			'nvim-treesitter/nvim-treesitter',
+			config = function()
 				require('configs.treesitter')
 			end,
 			{ run = ':TSUpdate'}
-		}) 
+		})
 
 		-- LSP
 		use ({
@@ -48,4 +47,7 @@ return require("packer").startup(function(use)
 		  }
 		})
 		use("theprimeagen/harpoon")
+
+		-- Fugitive
+		use ('tpope/vim-fugitive')
 end)
