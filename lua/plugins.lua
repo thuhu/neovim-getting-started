@@ -53,4 +53,11 @@ return require("packer").startup(function(use)
 
 	-- Undo tree
 	use('mbbill/undotree')
+
+	-- Lua line
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true
+	}
+}
 end)

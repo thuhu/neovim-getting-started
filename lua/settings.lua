@@ -14,3 +14,5 @@ o.ruler = true -- Show the line and column number of the cursor position, separa
 o.title = true -- When on, the title of the window will be set to the value of the title string
 o.showmatch = true -- When a bracket is inserted, briefly jump to the maching bracketr
 o.wrap = false
+
+o.showmode = true
