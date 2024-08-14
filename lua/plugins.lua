@@ -26,6 +26,14 @@ return require("packer").startup(function(use)
   		end
 	})
 
+	-- Neovim tree
+	use {
+	  'nvim-tree/nvim-tree.lua',
+	  requires = {
+		'nvim-tree/nvim-web-devicons', -- optional
+	  },
+	}
+
 	-- use({ 'rose-pine/neovim', as = 'rose-pine' })
 	-- use "rebelot/kanagawa.nvim"
 	use { "catppuccin/nvim", as = "catppuccin" }
